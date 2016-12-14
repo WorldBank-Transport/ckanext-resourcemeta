@@ -59,23 +59,8 @@ do::
     git clone https://github.com/WorldBank-Transport/ckanext-resourcemeta.git
     cd ckanext-resourcemeta
     python setup.py develop
-    pip install -r dev-requirements.txt
 
 Then add ``resourcemeta`` to the ``ckan.plugins`` setting in your CKAN
-
-
------------------
-Running the Tests
------------------
-
-To run the tests, do::
-
-    nosetests --nologcapture --with-pylons=test.ini
-
-To run the tests and produce a coverage report, first make sure you have
-coverage installed in your virtualenv (``pip install coverage``) then run::
-
-    nosetests --nologcapture --with-pylons=test.ini --with-coverage --cover-package=ckanext.resourcemeta --cover-inclusive --cover-erase --cover-tests
 
 
 .. _CKAN: http://ckan.org
