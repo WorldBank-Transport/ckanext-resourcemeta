@@ -1,0 +1,8 @@
+{% ckan_extends %}
+
+{% block metadata_fields %}
+    {% block metadata_fields_release_date %}
+        {{ form.input('resource_release_date', label=_('Release date'), id='field-release_date', placeholder=_('eg: dd/mm/yyyy'), value=data.resource_release_date, error=errors.resource_release_date, classes=['control-medium']) }}
+    {% endblock %}
+    {{ super() }}
+{% endblock %}
