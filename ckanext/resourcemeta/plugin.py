@@ -14,9 +14,51 @@ class ResourcemetaPlugin(plugins.SingletonPlugin,
 
     def _modify_package_schema(self, schema):
         schema['resources'].update({
-			'resource_release_date': [
+            'resource_release_date': [
                 toolkit.get_validator('ignore_missing'),
                 toolkit.get_converter('convert_to_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_geographical_coverage': [
+                toolkit.get_validator('ignore_missing'),
+                toolkit.get_converter('convert_to_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_exceptions': [
+                toolkit.get_validator('ignore_missing'),
+                toolkit.get_converter('convert_to_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_formulas': [
+                tk.get_validator('ignore_missing'),
+                tk.get_converter('convert_to_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_definitions': [
+                tk.get_validator('ignore_missing'),
+                tk.get_converter('convert_to_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_units_used': [
+                tk.get_validator('ignore_missing'),
+                tk.get_converter('convert_to_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_unique_identifier_field': [
+                tk.get_validator('ignore_missing'),
+                tk.get_converter('convert_to_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_coordinate_reference_system': [
+                tk.get_validator('ignore_missing'),
+                tk.get_converter('convert_to_extras')
             ]
         })
         return schema
@@ -34,9 +76,51 @@ class ResourcemetaPlugin(plugins.SingletonPlugin,
     def show_package_schema(self):
         schema = super(ResourcemetaPlugin, self).show_package_schema()
         schema['resources'].update({
-			'resource_release_date': [
+            'resource_release_date': [
                 toolkit.get_validator('ignore_missing'),
                 toolkit.get_converter('convert_from_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_geographical_coverage': [
+                toolkit.get_validator('ignore_missing'),
+                toolkit.get_converter('convert_from_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_exceptions': [
+                toolkit.get_validator('ignore_missing'),
+                toolkit.get_converter('convert_from_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_formulas': [
+                tk.get_validator('ignore_missing'),
+                tk.get_converter('convert_from_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_definitions': [
+                tk.get_validator('ignore_missing'),
+                tk.get_converter('convert_from_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_units_used': [
+                tk.get_validator('ignore_missing'),
+                tk.get_converter('convert_from_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_unique_identifier_field': [
+                tk.get_validator('ignore_missing'),
+                tk.get_converter('convert_from_extras')
+            ]
+        })
+        schema['resources'].update({
+            'resource_coordinate_reference_system': [
+                tk.get_validator('ignore_missing'),
+                tk.get_converter('convert_from_extras')
             ]
         })
         return schema
