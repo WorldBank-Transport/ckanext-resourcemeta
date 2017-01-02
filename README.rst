@@ -5,11 +5,18 @@ ckanext-resourcemeta
 
 CKAN extension adding metadata fields to resources.
 
--------------------------
-Included Metadata fields
--------------------------
+----------------------------------
+Included Resource Metadata fields
+----------------------------------
 
-:``resource_release_date``: Release date
+- ``release_date``
+- ``geographical_coverage``
+- ``exceptions``
+- ``formulas``
+- ``definitions``
+- ``units_used``
+- ``unique_identifier_field``
+- ``coordinate_reference_system``
 
 ------------
 Requirements
@@ -60,7 +67,11 @@ do::
     cd ckanext-resourcemeta
     python setup.py develop
 
-Then add ``resourcemeta`` to the ``ckan.plugins`` setting in your CKAN
+Then add ``resourcemeta`` to the ``ckan.plugins`` setting in your CKAN.
+
+
+If you would like to contribute source code to this plugin feel free to fork the github repository
+https://github.com/WorldBank-Transport/ckanext-resourcemeta and set it as an ``upstream`` remote. For more information about forking a github repostiry check https://help.github.com/articles/fork-a-repo/ or search for additional online resources.
 
 
 .. _CKAN: http://ckan.org
