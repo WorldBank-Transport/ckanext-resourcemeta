@@ -2,28 +2,28 @@
 
 {% block metadata_fields %}
     {% block metadata_fields_release_date %}
-        {{ form.input('resource_release_date', label=_('Release date'), id='field-resource_release_date', placeholder=_('eg: dd/mm/yyyy'), value=data.resource_release_date, error=errors.resource_release_date, classes=['control-medium']) }}
+        {{ form.input('release_date', label=_('Release date'), id='field-release_date', placeholder=_('eg: dd/mm/yyyy'), value=data.release_date, error=errors.release_date, classes=['control-medium']) }}
     {% endblock %}
     {% block metadata_fields_geographical_coverage %}
-        {{ form.input('resource_geographical_coverage' , label=_('Geographical Coverage'), id='field-resource_geographical_coverage', placeholder=_('eg: Tanzania'), value=data.resource_geographical_coverage, error=errors.resource_geographical_coverage, classes=['control-full']) }}
+        {{ form.input('geographical_coverage' , label=_('Geographical Coverage'), id='field-geographical_coverage', placeholder=_('eg: Tanzania'), value=data.geographical_coverage, error=errors.geographical_coverage, classes=['control-full']) }}
     {% endblock %}
     {% block metadata_fields_exceptions %}
-        {{ form.input('resource_exceptions' , label=_('Exceptions'), id='field-resource_exceptions', placeholder=_('eg: June data is missing'), value=data.resource_exceptions, error=errors.resource_exceptions, classes=['control-full']) }}
+        {{ form.input('exceptions' , label=_('Exceptions'), id='field-exceptions', placeholder=_('eg: June data is missing'), value=data.exceptions, error=errors.exceptions, classes=['control-full']) }}
     {% endblock %}
     {% block metadata_fields_formulas %}
-        {{ form.markdown('resource_formulas' , label=_('Formulas'), id='field-resource_formulas', placeholder=_('eg: Percentage coverage = Total population served / coverage'), value=data.resource_formulas, error=errors.resource_formulas, classes=[]) }}
+        {{ form.markdown('formulas' , label=_('Formulas'), id='field-formulas', placeholder=_('eg: Percentage coverage = Total population served / coverage'), value=data.formulas, error=errors.formulas, classes=[]) }}
     {% endblock %}
     {% block metadata_fields_definitions %}
-        {{ form.markdown('resource_definitions' , label=_('Definitions'), id='field-resource_definitions', placeholder=_('eg: Definitions for data fields'), value=data.resource_definitions, error=errors.resource_definitions, classes=[]) }}
+        {{ form.markdown('definitions' , label=_('Definitions'), id='field-definitions', placeholder=_('eg: Definitions for data fields'), value=data.definitions, error=errors.definitions, classes=[]) }}
     {% endblock %}
     {% block metadata_fields_units_used %}
-        {{ form.input('resource_units_used' , label=_('Units Used'), id='field-resource_units_used', placeholder=_('eg: Distance: metre, Area: Acres'), value=data.resource_units_used, error=errors.resource_units_used, classes=['control-full']) }}
+        {{ form.input('units_used' , label=_('Units Used'), id='field-units_used', placeholder=_('eg: Distance: metre, Area: Acres'), value=data.units_used, error=errors.units_used, classes=['control-full']) }}
     {% endblock %}
     {% block metadata_fields_unique_identifier_field %}
-        {{ form.input('resource_unique_identifier_field' , label=_('Unique Identifier Field'), id='field-resource_unique_identifier_field', placeholder=_('eg: facility_id'), value=data.resource_unique_identifier_field, error=errors.resource_unique_identifier_field, classes=['control-full']) }}
+        {{ form.input('unique_identifier_field' , label=_('Unique Identifier Field'), id='field-unique_identifier_field', placeholder=_('eg: facility_id'), value=data.unique_identifier_field, error=errors.unique_identifier_field, classes=['control-full']) }}
     {% endblock %}
     {% block metadata_fields_coordinate_reference_system %}
-        {{ form.input('resource_coordinate_reference_system' , label=_('Coordinate Reference System'), id='field-resource_coordinate_reference_system', placeholder=_('Applicable for Geospatial Data, eg: WGS84 EPGS:4326'), value=data.resource_coordinate_reference_system, error=errors.resource_coordinate_reference_system, classes=['control-full']) }}
+        {{ form.input('coordinate_reference_system' , label=_('Coordinate Reference System'), id='field-coordinate_reference_system', placeholder=_('Applicable for Geospatial Data, eg: WGS84 EPGS:4326'), value=data.coordinate_reference_system, error=errors.coordinate_reference_system, classes=['control-full']) }}
     {% endblock %}
     {{ super() }}
 {% endblock %}
