@@ -1,11 +1,14 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+from ckan.lib.plugins import DefaultTranslation
 
 
 class ResourcemetaPlugin(plugins.SingletonPlugin,
-                         toolkit.DefaultDatasetForm):
+                         toolkit.DefaultDatasetForm,
+                         DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IDatasetForm)
+    plugins.implements(plugins.ITranslation)
 
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
