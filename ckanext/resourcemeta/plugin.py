@@ -1,6 +1,11 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
-from ckan.lib.plugins import DefaultTranslation
+
+try:
+    from ckan.lib.plugins import DefaultTranslation
+except ImportError:
+    class DefaultTranslation():
+        pass
 
 
 class ResourcemetaPlugin(plugins.SingletonPlugin,
