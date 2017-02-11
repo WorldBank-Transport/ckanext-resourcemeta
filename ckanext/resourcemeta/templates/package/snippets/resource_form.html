@@ -4,26 +4,7 @@
     {% block metadata_fields_release_date %}
         {{ form.input('release_date', label=_('Release date'), id='field-release_date', placeholder=_('eg: dd/mm/yyyy'), value=data.release_date, error=errors.release_date, classes=['control-medium']) }}
     {% endblock %}
-    {% block metadata_fields_geographical_coverage %}
-        {{ form.input('geographical_coverage' , label=_('Geographical Coverage'), id='field-geographical_coverage', placeholder=_('eg: Tanzania'), value=data.geographical_coverage, error=errors.geographical_coverage, classes=['control-full']) }}
-    {% endblock %}
     {% block metadata_fields_exceptions %}
         {{ form.input('exceptions' , label=_('Exceptions'), id='field-exceptions', placeholder=_('eg: June data is missing'), value=data.exceptions, error=errors.exceptions, classes=['control-full']) }}
     {% endblock %}
-    {% block metadata_fields_formulas %}
-        {{ form.markdown('formulas' , label=_('Formulas'), id='field-formulas', placeholder=_('eg: Percentage coverage = Total population served / coverage'), value=data.formulas, error=errors.formulas, classes=[]) }}
-    {% endblock %}
-    {% block metadata_fields_definitions %}
-        {{ form.markdown('definitions' , label=_('Definitions'), id='field-definitions', placeholder=_('eg: Definitions for data fields'), value=data.definitions, error=errors.definitions, classes=[]) }}
-    {% endblock %}
-    {% block metadata_fields_units_used %}
-        {{ form.input('units_used' , label=_('Units Used'), id='field-units_used', placeholder=_('eg: Distance: metre, Area: Acres'), value=data.units_used, error=errors.units_used, classes=['control-full']) }}
-    {% endblock %}
-    {% block metadata_fields_unique_identifier_field %}
-        {{ form.input('unique_identifier_field' , label=_('Unique Identifier Field'), id='field-unique_identifier_field', placeholder=_('eg: facility_id'), value=data.unique_identifier_field, error=errors.unique_identifier_field, classes=['control-full']) }}
-    {% endblock %}
-    {% block metadata_fields_coordinate_reference_system %}
-        {{ form.input('coordinate_reference_system' , label=_('Coordinate Reference System'), id='field-coordinate_reference_system', placeholder=_('Applicable for Geospatial Data, eg: WGS84 EPGS:4326'), value=data.coordinate_reference_system, error=errors.coordinate_reference_system, classes=['control-full']) }}
-    {% endblock %}
-    {{ super() }}
 {% endblock %}

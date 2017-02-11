@@ -23,45 +23,9 @@ class ResourcemetaPlugin(plugins.SingletonPlugin,
             ]
         })
         schema['resources'].update({
-            'geographical_coverage': [
-                toolkit.get_validator('ignore_missing'),
-                toolkit.get_converter('convert_to_extras')
-            ]
-        })
-        schema['resources'].update({
             'exceptions': [
                 toolkit.get_validator('ignore_missing'),
                 toolkit.get_converter('convert_to_extras')
-            ]
-        })
-        schema['resources'].update({
-            'formulas': [
-                tk.get_validator('ignore_missing'),
-                tk.get_converter('convert_to_extras')
-            ]
-        })
-        schema['resources'].update({
-            'definitions': [
-                tk.get_validator('ignore_missing'),
-                tk.get_converter('convert_to_extras')
-            ]
-        })
-        schema['resources'].update({
-            'units_used': [
-                tk.get_validator('ignore_missing'),
-                tk.get_converter('convert_to_extras')
-            ]
-        })
-        schema['resources'].update({
-            'unique_identifier_field': [
-                tk.get_validator('ignore_missing'),
-                tk.get_converter('convert_to_extras')
-            ]
-        })
-        schema['resources'].update({
-            'coordinate_reference_system': [
-                tk.get_validator('ignore_missing'),
-                tk.get_converter('convert_to_extras')
             ]
         })
         return schema
@@ -85,45 +49,9 @@ class ResourcemetaPlugin(plugins.SingletonPlugin,
             ]
         })
         schema['resources'].update({
-            'geographical_coverage': [
-                toolkit.get_validator('ignore_missing'),
-                toolkit.get_converter('convert_from_extras')
-            ]
-        })
-        schema['resources'].update({
             'exceptions': [
                 toolkit.get_validator('ignore_missing'),
                 toolkit.get_converter('convert_from_extras')
-            ]
-        })
-        schema['resources'].update({
-            'formulas': [
-                tk.get_validator('ignore_missing'),
-                tk.get_converter('convert_from_extras')
-            ]
-        })
-        schema['resources'].update({
-            'definitions': [
-                tk.get_validator('ignore_missing'),
-                tk.get_converter('convert_from_extras')
-            ]
-        })
-        schema['resources'].update({
-            'units_used': [
-                tk.get_validator('ignore_missing'),
-                tk.get_converter('convert_from_extras')
-            ]
-        })
-        schema['resources'].update({
-            'unique_identifier_field': [
-                tk.get_validator('ignore_missing'),
-                tk.get_converter('convert_from_extras')
-            ]
-        })
-        schema['resources'].update({
-            'coordinate_reference_system': [
-                tk.get_validator('ignore_missing'),
-                tk.get_converter('convert_from_extras')
             ]
         })
         return schema
