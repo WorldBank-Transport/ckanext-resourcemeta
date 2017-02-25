@@ -31,6 +31,12 @@ class ResourcemetaPlugin(plugins.SingletonPlugin,
             ]
         })
         schema['resources'].update({
+            'aggregation_level': [
+                toolkit.get_validator('ignore_missing'),
+                toolkit.get_converter('convert_to_extras')
+            ]
+        })
+        schema['resources'].update({
             'exceptions': [
                 toolkit.get_validator('ignore_missing'),
                 toolkit.get_converter('convert_to_extras')
@@ -52,6 +58,12 @@ class ResourcemetaPlugin(plugins.SingletonPlugin,
         schema = super(ResourcemetaPlugin, self).show_package_schema()
         schema['resources'].update({
             'release_date': [
+                toolkit.get_validator('ignore_missing'),
+                toolkit.get_converter('convert_from_extras')
+            ]
+        })
+        schema['resources'].update({
+            'aggregation_level': [
                 toolkit.get_validator('ignore_missing'),
                 toolkit.get_converter('convert_from_extras')
             ]

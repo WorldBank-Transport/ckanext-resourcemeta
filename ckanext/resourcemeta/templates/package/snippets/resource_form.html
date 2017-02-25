@@ -4,6 +4,9 @@
     {% block metadata_fields_release_date %}
         {{ form.input('release_date', label=_('Release date'), id='field-release_date', placeholder=_('eg: dd/mm/yyyy'), value=data.release_date, error=errors.release_date, classes=['control-medium']) }}
     {% endblock %}
+    {% block metadata_fields_aggregation_level %}
+        {{ form.input('aggregation_level', label=_('Aggregation level'), id='field-aggregation-level', placeholder=_('eg: District'), value=data.aggregation_level, error=errors.aggregation_level, classes=['control-medium']) }}
+    {% endblock %}
     {% block metadata_fields_exceptions %}
         {{ form.input('exceptions' , label=_('Exceptions'), id='field-exceptions', placeholder=_('eg: June data is missing'), value=data.exceptions, error=errors.exceptions, classes=['control-full']) }}
     {% endblock %}
