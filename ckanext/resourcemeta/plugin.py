@@ -1,3 +1,4 @@
+from datetime import datetime
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
@@ -13,6 +14,8 @@ class ResourcemetaPlugin(plugins.SingletonPlugin,
                          DefaultTranslation):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IDatasetForm)
+    plugins.implements(plugins.IResourceController)
+
     try:
         plugins.implements(plugins.ITranslation)
     except AttributeError:
@@ -75,6 +78,27 @@ class ResourcemetaPlugin(plugins.SingletonPlugin,
             ]
         })
         return schema
+
+    def before_create(self, context, resource):
+        pass
+
+    def after_create(self, context, resource):
+        pass
+
+    def before_update(self, context, current, resource):
+        resource['last_modified'] = datetime.utcnow()
+
+    def after_update(self, context, resource):
+        pass
+
+    def before_delete(self, context, resource, resources):
+        pass
+
+    def after_delete(self, context, resources):
+        pass
+
+    def before_show(self, resource):
+        pass
 
     def is_fallback(self):
         # Return True to register this plugin as the default handler for
