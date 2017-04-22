@@ -86,7 +86,7 @@ class ResourcemetaPlugin(plugins.SingletonPlugin,
         pass
 
     def before_update(self, context, current, resource):
-        resource['last_modified'] = datetime.utcnow()
+        resource['last_modified'] = datetime.now()
 
     def after_update(self, context, resource):
         pass
